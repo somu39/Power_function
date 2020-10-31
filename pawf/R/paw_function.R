@@ -3,14 +3,21 @@
 #' 'pw' Power
 #' 'paw' function
 #' @export
-paw=function(bs,pw)
+paw = function(bs, pw)
 {
-  c=bs
-  for(i in seq(1,pw-1)){
-    bs=bs*c
-
+  c = bs
+  if (pw == 0)
+  {
+    bs = 1  
+  } else
+  {
+    for (i in seq(1, pw - 1))
+    {
+      bs = bs * c
+    }   
   }
   return(bs)
 }
+
 
 
